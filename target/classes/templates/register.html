@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/my.css">
+<title>Sign Up</title>
+</head>
+<body>
+
+	<!-- Section: Design Block -->
+	<section class="text-center">
+		<!-- Background image -->
+		<div class="p-5 bg-image"
+			style="background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg'); height: 300px; width: 1000px; align-content: center; right: 30px;"></div>
+ <div class="card1 mx-4 mx-md-5 shadow-5-strong"
+            style="margin-top: -100px; background: hsla(50%, 20%, 200%, 100%); backdrop-filter: blur(30px); width: 1000px; align-content: center; right: 30px;">
+            <div class="card-body1 py-5 px-md-5">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="fw-bold mb-5">Sign up now</h2>
+                        <form th:action="@{/register}" th:object="${user}" method="post">
+                            <!-- Your form fields -->
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="username" name="username" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required/>
+                            </div>
+                            <!-- Add other form fields as needed -->
+
+                            <button type="submit" class="btn btn-primary btn-block mb-4">Register</button>
+							<!-- Register buttons -->
+							<div class="text-center">
+								<h3>
+									If u have already account click here to : <a class="nav-link"
+										th:href="@{/login}">Login</a>
+									<!-- ... (other links) ... -->
+								</h3>
+
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Section: Design Block -->
+
+</body>
+</html>
